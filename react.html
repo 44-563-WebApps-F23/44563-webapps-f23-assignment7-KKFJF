@@ -13,23 +13,23 @@
 
 <body>
 
-<h2>Timeout to change color - Yellow</h2>
+<h2>Timeout to change color - green</h2>
 
     <button type="button" class="btn btn-primary" onclick="buttonPress2()">
-        Click me change the color.</button>
+        snap me change the color.</button>
 
-    <p id="targeted">I will become red </p>
+    <p id="targeted">I will become green </p>
 
     <script>
         function buttonPress1() {
             setTimeout(function () {
-                document.getElementById('targeted').style.color = "yellow"
+                document.getElementById('targeted').style.color = "green"
             }, 4000)
         }
 
         function buttonPress2() {
             setTimeout(() => {
-                document.getElementById('targeted').style.color = "yellow"
+                document.getElementById('targeted').style.color = "green"
             }, 4000)
         }
 
@@ -42,7 +42,7 @@
             for (let i = 0; i < 9; i++) {
                 setTimeout(() => {
                     document.getElementById('counter').innerHTML = i;
-                }, ((8 - i) * 1000))
+                }, ((9 - i) * 1000))
             }
 
             setTimeout(() => {
