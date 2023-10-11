@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>setTimeout</title>
+  <title>setTimeout use</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -11,19 +11,19 @@
 </head>
 <body>
 
-  <h2>Timeout to change color - yellow</h2>
+  <h2>Timeout Speed check</h2>
 
   <button type="button"
   class="btn btn-primary"
   onclick="buttonPress2()">
-  snap me change the color.</button>
+  snap me to change the color.</button>
   
-  <p id="target">I will turn into yellow </p>
+  <p id="target">I will turn into Yellow </p>
   
   <script> 
   function buttonPress1() {
     setTimeout(function(){
-      document.getElementById('target').style.color="red"
+      document.getElementById('target').style.color = "yellow"
     }, 3000)
   }
 
