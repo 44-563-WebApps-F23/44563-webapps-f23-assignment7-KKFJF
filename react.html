@@ -12,26 +12,8 @@
 </head>
 
 <body>
-
-<h2>Timeout to change color - green</h2>
-
-    <button type="button" class="btn btn-primary" onclick="buttonPress2()">
-        snap me change the color.</button>
-
-    <p id="targeted">I will become green </p>
-
     <script>
-        function buttonPress1() {
-            setTimeout(function () {
-                document.getElementById('targeted').style.color = "green"
-            }, 4000)
-        }
-
-        function buttonPress2() {
-            setTimeout(() => {
-                document.getElementById('targeted').style.color = "green"
-            }, 4000)
-        }
+        
 
         function recordTime() {
             reactTime = Date.now();
@@ -39,14 +21,14 @@
         }
 
         function startTime() {
-            for (let i = 0; i < 9; i++) {
+            for (let i = 0; i <Math.floor(Math.random()*(10-2+1)-2);i++){
                 setTimeout(() => {
                     document.getElementById('counter').innerHTML = i;
-                }, ((9 - i) * 1000))
+                }, ((8 - i) * 1000))
             }
 
             setTimeout(() => {
-            }, 8000)
+            }, 8000);
 
             if (!reactTime) {
                 document.getElementById('target').innerHTML = "Too Slow";

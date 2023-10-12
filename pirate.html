@@ -25,7 +25,7 @@
 <div id="penalty" style="color:cadetblue;font-size:18px;font-family:'Times New Roman', Times, serif;text-indent: 15px">
     Penalty is zero.
 </div>
-<div style="color:chocolate;font-size:18px;font-family:'Times New Roman', Times, serif;text-indent: 15px">
+<div onclick="help()" style="color:chocolate;font-size:18px;font-family:'Times New Roman', Times, serif;text-indent: 15px">
     Click for help.
 </div>
 <div id="help" style="color:darkcyan;font-size:18px;font-family:'Times New Roman', Times, serif;text-indent: 15px">
@@ -123,6 +123,7 @@
         </div>
     </div>
 </div>
+<button class="btn" onclick="btn()" style="color: blue;">New</button>
 <Script>
     let checkCount=0;
     let penalty=0;
@@ -180,6 +181,12 @@
         penalty=penalty+2;
         document.getElementById("penalty").innerHTML='Penalties:'+penalty;
     }
+    function btn(){
+      let penalty=0;
+      let checkCount=0;
+      treasureLoc=Math.floor(Math.random()*25);
+      trapLoc=Math.floor(Math.random()*25);
+   }
 
 
 </Script>

@@ -28,8 +28,8 @@
 		  <div class="merger">row item 3</div>  
 		</div>
 	
-	<p> Press the button to create an new element of type div and then add it to the container.
-		</p>
+	
+
 		<button onclick="makeNewDiv()">Add end</button>
 	<h1>Deepthi build a merge</h1>
     <input type="text" placeholder="enter text" id="append">
@@ -37,6 +37,7 @@
     <button onclick="addFront()">Add front</button>
 
     <button onclick="remove()">Remove</button>
+	<button onclick="swap()">Swap</button>
 	
 </body>
 <script>
@@ -72,6 +73,19 @@
 		container.insertBefore(element, container.firstChild);
 
     }
+	function swap() {
+		let mergerItems = document.getElementsByClassName("merger");
+		let container = document.getElementById("target");
+		let element1 = Math.floor(Math.random() * mergerItems.length);
+		let element2 = Math.floor(Math.random() * mergerItems.length);
+		let firstInnerText = document.getElementsByClassName("merger")[element1];
+		let secondInnerText = document.getElementsByClassName("merger")[element2];
+		if (mergerItems.length > 1) {
+			let temp = firstInnerText.innerHTML;
+			firstInnerText.innerHTML = secondInnerText.innerHTML;
+			secondInnerText.innerHTML = temp;
+		}
+	}
 
 </script>
 </html>	
